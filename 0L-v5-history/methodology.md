@@ -1,4 +1,4 @@
-# Historical account balances of the open libry v5 network
+# Historical account balances of the open libra v5 network
 
 The idea to get all historical account balances is to restore a snapshot from the epoch archive and then run a v5 open libra node.
 As the v5 network is not running any longer, the node will just come up with the data from the snapshot and not start syncing to a newer state. So, when issuing a query command, the account balances will reflect the state as per the restored epoch-archive.
@@ -11,7 +11,7 @@ https://docs.google.com/spreadsheets/d/1_vEFRrWGKqqdn8pz68irq_iiNJrI1diDPDUxlw1j
 
 For simplicity, a csv transformation of date and epoch is stored in here: [epochs-and-dates.csv](input-data/epochs-and-dates.csv)
 
-Further date to epoch mappings can be found in the epoch archive itself: [epoch-archive}(https://github.com/OLSF/epoch-archive)
+Further date to epoch mappings can be found in the epoch archive itself: [epoch-archive](https://github.com/OLSF/epoch-archive)
 
 ## account numbers
 
@@ -20,11 +20,11 @@ A dump of all account numbers that ever existed in the v5 network can be found h
 
 ## preparing the open libra node
 
-Standard setup of v5 libra according to docs in the libra repository in the ol/documentation sub folder. Short version:
+Standard setup of v5 libra according to docs in the libra repository in the [documentation](https://github.com/0LNetworkCommunity/libra-legacy-v6/tree/v5/ol/documentation) sub folder. Short version:
 
 ```
-git clone https://github.com/OLSF/libra.git
-cd libra
+git clone https://github.com/0LNetworkCommunity/libra-legacy-v6
+cd libra-legacy-v6
 git checkout release-v5.2.0
 make deps
 make bins install
@@ -35,7 +35,7 @@ make bins install
 Find the epoch number of interest in [epochs-and-dates.csv](input-data/epochs-and-dates.csv), fetch and extract the according tar.gz file from the epoch archive and call the restore-all make target:
 
 ```
-git clone https://github.com/OLSF/epoch-archive
+git clone https://github.com/0LNetworkCommunity/epoch-archive-v5
 cd epoch-archive
 gzip -dc 415.tar.gz | tar xvf -
 EPOCH=415 make restore-all
