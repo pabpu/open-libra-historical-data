@@ -1,6 +1,6 @@
 # 0L-v6-transactions
 
-Currently the transactions prior to v7 fork cannot be seen in the [open libra block explorer](https://scan.openlibra.world), but in the 0LNetworkCommunity githup project a [dump of historical transactions can be found](https://raw.githubusercontent.com/0LNetworkCommunity/flying-fortress/refs/heads/main/db_snapshot/neo4j-2025-02-07T21-52-32.backup). A copy of this file can also be found here in the current repository: [neo4j-2025-02-07T21-52-32.backup](neo4j-2025-02-07T21-52-32.backup)
+Currently the transactions prior to the v7 fork cannot be seen in the [open libra block explorer](https://scan.openlibra.world), but in the 0LNetworkCommunity github project a [dump of historical transactions can be found](https://raw.githubusercontent.com/0LNetworkCommunity/flying-fortress/refs/heads/main/db_snapshot/neo4j-2025-02-07T21-52-32.backup). A copy of this file can also be found here in the current repository: [neo4j-2025-02-07T21-52-32.backup](neo4j-2025-02-07T21-52-32.backup)
 
 This file can be imported into neo4j-enterprise: 
 ```
